@@ -23,7 +23,8 @@ export default function Home() {
       <Header
         imageUrl="https://tse1.explicit.bing.net/th?id=OIP.rExqAS6nxccIjikCQQdfvQHaFj&pid=Api"
         text="Photo de chat"
-      ></Header>
+      >
+    </Header>
     </div>
   )
 }
