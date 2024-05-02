@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+noisy {
+  background-image: url();
+  background-attachment: fixed;
+} 
