@@ -15,7 +15,7 @@ module.exports = {
         quinary: "rgb(238, 233, 222)",
       },
       backgroundImage: {
-        "noise": "url('/noise-light.png')",
+        "noise": "url('https://arc.net/noise-light.png')",
       },
     },
   },
