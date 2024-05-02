@@ -1,25 +1,25 @@
-import { Inter } from "next/font/google";
+import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
   return (
-    <>
-      <p className="text-primary">
+    <main className="w-full min-h-screen bg-tertiary flex justify-around items-center">
+      <p className="bg-primary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
         Primary color
       </p>
-      <p className="text-secondary">
+      <p className="bg-secondary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
         Secondary color
       </p>
-      <p className="text-tertiary">
+      <p className="bg-tertiary text-quaternary h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
         Tertiary color
       </p>
-      <p className="text-quaternary">
+      <p className="bg-quaternary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
         Quaternary color
       </p>
-      <p className="text-quinary">
+      <p className="bg-quinary text-quaternary h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
         Quinary color
       </p>
-    </>
-  );
+    </main>
+  )
 }
