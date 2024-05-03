@@ -26,7 +26,7 @@ const HeaderForm = ({ folioConfig, setFolioConfig, id, publish }) => {
               onChange={(e) => setHeader({ ...header, imageUrl: e.target.value })}
               onBlur={publish}
               placeholder="Image URL"
-              className="w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:italic p-2 px-3 rounded-xl outline-none border-primary border-2 autofill:bg-[#df9884]" autoComplete="off"
+              className="w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:italic p-2 px-3 rounded-xl outline-none border-tertiary border-2 autofill:bg-[#df9884]" autoComplete="off"
             />
           </div>
           <div className="flex w-full flex-col gap-2 text-tertiary">
@@ -38,7 +38,7 @@ const HeaderForm = ({ folioConfig, setFolioConfig, id, publish }) => {
               placeholder="Header Text"
               onChange={(e) => setHeader({ ...header, text: e.target.value })}
               onBlur={publish}
-              className="uppercase w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:capitalize placeholder:italic p-2 px-3 rounded-xl outline-none border-primary border-2"
+              className="uppercase w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:capitalize placeholder:italic p-2 px-3 rounded-xl outline-none border-tertiary border-2"
             />
           </div>
         </div>

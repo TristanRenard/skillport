@@ -26,7 +26,7 @@ const TitleForm = ({ folioConfig, setFolioConfig, id, publish }) => {
               placeholder="Title"
               onChange={(e) => setTitle({ ...title, text: e.target.value })}
               onBlur={publish}
-              className="uppercase w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:capitalize placeholder:italic p-2 px-3 rounded-xl outline-none border-primary border-2"
+              className="uppercase w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:capitalize placeholder:italic p-2 px-3 rounded-xl outline-none border-tertiary border-2"
             />
           </div>
         </div>
