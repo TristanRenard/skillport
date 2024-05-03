@@ -1,4 +1,7 @@
+import { Description } from "@/components/portfolio/description"
 import { Header } from "@/components/portfolio/header"
+import { Projet } from "@/components/portfolio/projet"
+import { Titre } from "@/components/portfolio/titre"
 
 export default function Home() {
   return (
@@ -21,10 +24,21 @@ export default function Home() {
         </p>
       </main>
       <Header
-        imageUrl="https://tse1.explicit.bing.net/th?id=OIP.rExqAS6nxccIjikCQQdfvQHaFj&pid=Api"
+        imageUrl="https://tse4.mm.bing.net/th?id=OIP.L_Od205XI-2i5LXm8yw2IwHaEo&pid=Api"
         text="Photo de chat"
-      >
-    </Header>
+      />
+      <Description
+        text="Lorem ipsum dolor sit amet consectetur. Mauris felis tristique volutpat enim porttitor. Interdum maecenas convallis lorem vitae elementum tellus. Leo imperdiet natoque sed"
+        titre="Jean Moulin"
+      />
+      <Titre titre="Mes projets" />
+      <Projet
+        imageUrl="https://tse2.mm.bing.net/th?id=OIP.YDMTEBn7QTiSF8HnOAe5RQHaEo&pid=Api"
+        titre="Premier projet"
+        techno="HTML_CSS_JS"
+        date="Janvier 2020"
+        description="ça c'ets mon projet Lorem ipsum dolor sit amet consectetur. Mauris felis tristique volutpat enim porttitor."
+      />
     </div>
   )
 }
