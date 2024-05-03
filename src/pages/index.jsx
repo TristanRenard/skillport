@@ -1,46 +1,108 @@
-import { Description } from "@/components/portfolio/description"
-import { Header } from "@/components/portfolio/header"
-import { Projet } from "@/components/portfolio/projet"
-import { Titre } from "@/components/portfolio/titre"
+import NavBar from "@/components/NavBar"
+import { Montserrat } from "next/font/google"
+import clsx from "clsx"
 import Link from "next/link"
+
+const montserrat = Montserrat({ subsets: ["latin"] })
 
 export default function Home() {
   return (
-    <div className="bg-tertiary">
-      <main className="w-full min-h-screen bg-tertiary flex justify-around items-center">
-        <p className="bg-primary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
-          Primary color
-        </p>
-        <p className="bg-secondary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
-          Secondary color
-        </p>
-        <p className="bg-tertiary text-quaternary h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
-          Tertiary color
-        </p>
-        <p className="bg-quaternary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
-          Quaternary color
-        </p>
-        <p className="bg-quinary text-quaternary h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
-          Quinary color
-        </p>
+    <div className={clsx("bg-tertiary", montserrat.className)}>
+      <NavBar />
+      <main>
+        <div className="flex">
+          <img src="/heroheader.png" alt="Image header" className="w-2/3" />
+          <div className="flex flex-col justify-center">
+            <h1 className="uppercase text-6xl font-black text-primary mb-10">
+              SKILLPORT
+            </h1>
+            <div className="text-xl">
+              <p>
+                Montrez vos{" "}
+                <span className="font-bold text-primary">skill</span>
+              </p>
+              <p>
+                Créez votre{" "}
+                <span className="font-bold text-primary">portfolio</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center mt-20">
+          <p className="text-center w-3/5">
+            Avoir un portfolio en ligne est essentiel dans un monde où la
+            première impression compte énormément. C'est l'occasion idéale de
+            mettre en avant vos réalisations passées, vos projets réussis et vos
+            compétences uniques, créant ainsi une image professionnelle et
+            convaincante auprès des recruteurs et des clients.
+          </p>
+          <Link
+            href="createFolio.jsx"
+            className="text-quaternary bg-primary p-3 rounded-full mt-7"
+          >
+            Créer un portfolio
+          </Link>
+        </div>
+        <div className="mt-28">
+          <h2 className="w-full mb-16 text-center text-4xl font-black text-primary">
+            Nos avantages
+          </h2>
+          <ul className="flex justify-around px-36">
+            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
+              Des composants à la carte
+            </li>
+            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
+              Un contenu personnalisé à votre activité
+            </li>
+            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
+              Des images pour illuser vos contenu
+            </li>
+            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
+              Un design sobre pour sublimer vos idées
+            </li>
+          </ul>
+        </div>
+        <div className="mt-28 flex flex-col items-center">
+          <h2 className="w-full mb-8 text-center text-4xl font-black text-primary">
+            L'équipe
+          </h2>
+          <div className="grid grid-cols-2 grid-rows-3 w-2/5 my-8">
+            <img src="/vincent.jpg" alt="Vincent" />
+            <div className="flex flex-col justify-center items-center text-center">
+              <p className="font-bold text-primary text-3xl">Vincent</p>
+              <ul>
+                <li>Ingénieur système et réseau</li>
+                <li>Aime l'escalade</li>
+                <li>Joue à des jeux</li>
+              </ul>
+            </div>
+            <div className="flex flex-col justify-center items-center text-center">
+              <p className="font-bold text-primary text-3xl">Léa</p>
+              <ul>
+                <li>Developpeur</li>
+                <li>Aime les voitures qui vont vite</li>
+                <li>Ont lui a volé une glace</li>
+              </ul>
+            </div>
+            <img src="/lea.jpg" alt="Vincent" />
+            <img src="/tristan.jpg" alt="Vincent" />
+            <div className="flex flex-col justify-center items-center text-center">
+              <p className="font-bold text-primary text-3xl">Tristan</p>
+              <ul>
+                <li>Developpeur</li>
+                <li>Aime la mode</li>
+                <li>Dis des mots cailloux</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
-      <Link href="/showPortfolio">Voir un portfolio</Link>
-      <Header
-        imageUrl="https://tse4.mm.bing.net/th?id=OIP.L_Od205XI-2i5LXm8yw2IwHaEo&pid=Api"
-        text="Photo de chat"
-      />
-      <Description
-        text="Lorem ipsum dolor sit amet consectetur. Mauris felis tristique volutpat enim porttitor. Interdum maecenas convallis lorem vitae elementum tellus. Leo imperdiet natoque sed"
-        titre="Jean Moulin"
-      />
-      <Titre titre="Mes projets" />
-      <Projet
-        imageUrl="https://tse2.mm.bing.net/th?id=OIP.YDMTEBn7QTiSF8HnOAe5RQHaEo&pid=Api"
-        titre="Premier projet"
-        techno="HTML_CSS_JS"
-        date="Janvier 2020"
-        description="ça c'ets mon projet Lorem ipsum dolor sit amet consectetur. Mauris felis tristique volutpat enim porttitor."
-      />
+      <footer className="bg-primary text-tertiary flex justify-center py-7 mt-16">
+        <Link href="https://github.com/parlabarbedeMerlin/skillport">
+          GitHub
+        </Link>
+        <p> © mai 2024</p>
+      </footer>
     </div>
   )
 }

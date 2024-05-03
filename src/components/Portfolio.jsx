@@ -9,7 +9,6 @@ import React from "react"
 
 const Portfolio = ({ lstComponent }) => (
   <div>
-    <h1>Portfolio</h1>
     {lstComponent.map((element, index) => {
       if (element.type === "Header") {
         return (

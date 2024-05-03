@@ -76,7 +76,6 @@ const lstportfolio = [
 
 const ShowPortfolio = () => (
   <>
-    <h1>OUI</h1>
     <Portfolio lstComponent={lstportfolio} />
   </>
 )
