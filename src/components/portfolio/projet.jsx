@@ -3,13 +3,13 @@ import { Montserrat } from "next/font/google"
 
 const montserrat = Montserrat({ subsets: ["latin"] })
 export const Projet = ({ imageUrl, titre, techno, date, description }) => (
-  <div className={clsx("mb-20 w-sceen flex", montserrat.className)}>
+  <div className={clsx("w-sceen flex", montserrat.className)}>
     <div className="flex flex-col justify-between flex-1 p-4">
       <div className="flex justify-between">
         <p className="text-xl">{techno}</p>
         <p className="text-xl">© {date}</p>
       </div>
-      <p className="font-bold text-7xl">{titre}</p>
+      <p className="font-bold text-6xl">{titre}</p>
     </div>
     <div className="flex-1 relative max-h-128">
       <img

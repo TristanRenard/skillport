@@ -2,6 +2,7 @@ import { Description } from "@/components/portfolio/description"
 import { Header } from "@/components/portfolio/header"
 import { Projet } from "@/components/portfolio/projet"
 import { Titre } from "@/components/portfolio/titre"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
           Quinary color
         </p>
       </main>
+      <Link href="/showPortfolio">Voir un portfolio</Link>
       <Header
         imageUrl="https://tse4.mm.bing.net/th?id=OIP.L_Od205XI-2i5LXm8yw2IwHaEo&pid=Api"
         text="Photo de chat"
