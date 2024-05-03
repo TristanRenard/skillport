@@ -27,7 +27,7 @@ const ProjectForm = ({ folioConfig, setFolioConfig, id, publish }) => {
           </div>
           <div className="flex w-full flex-col gap-2 text-tertiary">
             <label className="text-lg" htmlFor="text">Tech Stack</label>
-            <input type="text" id="text" value={project.techo} placeholder="Tech Stack" onChange={(e) => setProject({ ...project, techo: e.target.value })} onBlur={publish} className="w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:italic p-2 px-3 rounded-xl outline-none border-tertiary border-2"
+            <input type="text" id="text" value={project.techno} placeholder="Tech Stack" onChange={(e) => setProject({ ...project, techno: e.target.value })} onBlur={publish} className="w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:italic p-2 px-3 rounded-xl outline-none border-tertiary border-2"
             />
           </div>
           <div className="flex w-full flex-col gap-2 text-tertiary">

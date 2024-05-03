@@ -15,7 +15,7 @@ const Types = {
     options: {
       imageUrl: "",
       titre: "",
-      techo: "",
+      techno: "",
       date: "",
       description: ""
     }
