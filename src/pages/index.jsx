@@ -6,7 +6,6 @@ export default function Home() {
       <NavBar />
 
       <main className="w-full h-full flex justify-around items-center">
-
         <p className="bg-primary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
           Primary color
         </p>
