@@ -1,9 +1,11 @@
-import { Header } from "@/components/portfolio/header"
+import NavBar from "@/components/NavBar"
 
 export default function Home() {
   return (
-    <div className="bg-tertiary">
-      <main className="w-full min-h-screen bg-tertiary flex justify-around items-center">
+    <div className="min-h-screen">
+      <NavBar />
+
+      <main className="w-full h-full flex justify-around items-center">
         <p className="bg-primary text-white h-52 w-52 border-black border-2 flex justify-center items-center rounded-2xl">
           Primary color
         </p>
@@ -20,11 +22,6 @@ export default function Home() {
           Quinary color
         </p>
       </main>
-      <Header
-        imageUrl="https://tse1.explicit.bing.net/th?id=OIP.rExqAS6nxccIjikCQQdfvQHaFj&pid=Api"
-        text="Photo de chat"
-      >
-    </Header>
     </div>
   )
 }
