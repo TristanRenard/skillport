@@ -17,6 +17,9 @@ module.exports = {
       backgroundImage: {
         "noise": "url('https://arc.net/noise-light.png')",
       },
+      spacing: {
+        128: "500px",
+      },
     },
   },
   plugins: [],
