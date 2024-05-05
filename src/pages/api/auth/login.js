@@ -17,14 +17,10 @@ const handler = mw(async (req, res) => {
       }
 
       res.status(401).json({ message: "Invalid credentials" })
-
-      return null
     }
 
     res.status(404).json({ message: "User not found" })
   }
-
-  return null
 })
 
 export default handler
