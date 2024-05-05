@@ -1,7 +1,7 @@
 import { ConnectionContextProvider } from "@/context/connection"
 import "@/styles/globals.css"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Montserrat } from "next/font/google"
-import { QueryClient, QueryClientProvider } from "react-query"
 
 
 // eslint-disable-next-line new-cap

@@ -3,6 +3,13 @@ import clsx from "clsx"
 import { useState } from "react"
 
 const Types = {
+  Header: {
+    type: "Header",
+    options: {
+      imageUrl: "",
+      text: ""
+    }
+  },
   Introduction: {
     type: "Introduction",
     options: {
@@ -15,7 +22,7 @@ const Types = {
     options: {
       imageUrl: "",
       titre: "",
-      techo: "",
+      techno: "",
       date: "",
       description: ""
     }
@@ -23,7 +30,7 @@ const Types = {
   Title: {
     type: "Title",
     options: {
-      text: "mes projets",
+      text: "",
       dispaly: true
     }
   },
@@ -68,6 +75,12 @@ const AddButton = ({ setFolioConfig, folioConfig }) => {
   const handleCancelClick = () => {
     setType("add")
   }
+  const isHeader = folioConfig.some((config) => config.type === "Header")
+
+  if (isHeader) {
+    delete Types.Header
+  }
+
 
   return (
     <div className={clsx("font-semibold flex justify-center items-center btn-primary w-11/12 bg-gradient-to-br from-primary to-[#df9884cc] rounded-3xl ", (type === "add") && "h-20", (type === "selectType") && "min-h-52")} >

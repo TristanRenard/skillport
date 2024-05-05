@@ -27,8 +27,6 @@ const handler = mw(async (req, res) => {
       return res.status(400).json({ message: error.message })
     }
   }
-
-  return null
 }
 )
 
