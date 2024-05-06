@@ -22,22 +22,22 @@
             }
         },
         {
-    "name": "skillport-plan",
-    "type": "Microsoft.Web/serverfarms",
-    "apiVersion": "2018-02-01",
-    "location": "[resourceGroup().location]",
-    "sku": {
-        "name": "B2",
-        "capacity": 1
-    },
-    "tags": {
-        "displayName": "skillport-plan"
-    },
-    "properties": {
-        "name": "skillport-plan"
-    }
-}
-      
+            "name": "skillport-plan",
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2018-02-01",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "B2",
+                "capacity": 1
+            },
+            "tags": {
+                "displayName": "skillport-plan"
+            },
+            "properties": {
+                "name": "skillport-plan"
+            }
+        }
+
     ],
     "outputs": {}
 }
