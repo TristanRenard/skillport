@@ -4,7 +4,7 @@ on: [push, pull_request]
 env:
   AZURE_WEBAPP_NAME: "skillport"
   AZURE_GROUP_NAME: "skillport"
-  AZURE_WEBAPP_PACKAGE_PATH: "c:/Users/VincentGAUTHIER/skillport/src"
+  AZURE_WEBAPP_PACKAGE_PATH: "c:/Users/VincentGAUTHIER/skillport"
   NODE_VERSION: "21.6.1"
 
 jobs:
