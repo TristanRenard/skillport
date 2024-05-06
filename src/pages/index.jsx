@@ -1,16 +1,14 @@
 import NavBar from "@/components/NavBar"
-import { Montserrat } from "next/font/google"
-import clsx from "clsx"
 import Link from "next/link"
 
-const montserrat = Montserrat({ subsets: ["latin"] })
-
+// eslint-disable-next-line max-lines-per-function
 export default function Home() {
   return (
-    <div className={clsx("bg-tertiary", montserrat.className)}>
+    <div className="bg-tertiary">
       <NavBar />
       <main>
         <div className="flex">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/heroheader.png" alt="Header Image" className="w-2/3" />
           <div className="flex flex-col justify-center">
             <h1 className="uppercase text-6xl font-black text-primary mb-10">
@@ -67,6 +65,7 @@ export default function Home() {
             The team
           </h2>
           <div className="grid grid-cols-2 grid-rows-3 w-2/5 my-8">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/vincent.jpg" alt="Vincent" />
             <div className="flex flex-col justify-center items-center text-center">
               <p className="font-bold text-primary text-3xl">Vincent</p>
@@ -84,7 +83,9 @@ export default function Home() {
                 <li>Had her ice cream stolen once</li>
               </ul>
             </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/lea.jpg" alt="Léa" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/tristan.jpg" alt="Tristan" />
             <div className="flex flex-col justify-center items-center text-center">
               <p className="font-bold text-primary text-3xl">Tristan</p>
