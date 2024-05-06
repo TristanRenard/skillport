@@ -60,7 +60,7 @@ const Register = () => {
   const handleSubmit = async (values) => {
     try {
       await registerSchema.validate(values)
-      const { data } = await axios.post("http://localhost:3000/api/auth/register", values)
+      const { data } = await axios.post("/api/auth/register", values)
 
       setSuccess(true)
       setMessage(data.message)

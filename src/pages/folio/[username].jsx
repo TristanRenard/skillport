@@ -2,7 +2,7 @@ import Portfolio from "@/components/Portfolio"
 import axios from "axios"
 
 export const getServerSideProps = async ({ params: { username } }) => {
-  const { folio } = await axios(`http://localhost:3000/api/folio/${username}`).then((res) => res.data)
+  const { folio } = await axios(`${process.env.HOST_NAME}/api/folio/${username}`).then((res) => res.data)
 
   return { props: { folio } }
 }
