@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import AddButton from "@/components/form/AddButton"
 import ContactForm from "@/components/form/ContactForm"
 import HeaderForm from "@/components/form/HeaderForm"
@@ -47,11 +48,10 @@ const CreateForm = () => {
     axios.post("/api/folio", { folio: folioConfig }).then((res) => res.data.folio)
   )
 
-  useEffect(() => {
-    axios.get("/api/folio").then((res) => {
-      setFolioConfig(res.data.folio)
-      setUsername(res.data.username)
-    })
+  useEffect(async () => {
+    const ress = await axios.get("/api/folio").then((res) => res.data.folio)
+    setUsername(ress.username)
+    setFolioConfig(ress.folio)
     refetch()
 
     return () => {
