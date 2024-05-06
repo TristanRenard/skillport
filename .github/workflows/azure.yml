@@ -4,7 +4,7 @@ on: [push, pull_request]
 env:
   AZURE_WEBAPP_NAME: "skillport"
   AZURE_GROUP_NAME: "skillport"
-  AZURE_WEBAPP_PACKAGE_PATH: "c:/Users/VincentGAUTHIER/skillport"
+  AZURE_WEBAPP_PACKAGE_PATH: "./skillport"	
   NODE_VERSION: "21.6.1"
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
 
       - name: build with node
         run: npm install && npm run build
-        working-directory: src
+        working-directory: ./src
 
       - uses: azure/login@v2
         with:
