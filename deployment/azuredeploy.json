@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [
+        {
+            "name": "skillport",
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2016-08-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/skillport-plan')]": "Resource",
+                "displayName": "skillport"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', 'skillport-plan')]"
+            ],
+            "properties": {
+                "name": "skillport",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'skillport-plan')]"
+            }
+        },
+        {
+    "name": "skillport-plan",
+    "type": "Microsoft.Web/serverfarms",
+    "apiVersion": "2018-02-01",
+    "location": "[resourceGroup().location]",
+    "sku": {
+        "name": "B2",
+        "capacity": 1
+    },
+    "tags": {
+        "displayName": "skillport-plan"
+    },
+    "properties": {
+        "name": "skillport-plan"
+    }
+}
+      
+    ],
+    "outputs": {}
+}
