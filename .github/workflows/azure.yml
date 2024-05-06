@@ -27,6 +27,7 @@ jobs:
       - run: |
           az group create -n skillport -l westeurope
           az group deployment create -g skillport --template-file deployment/azuredeploy.json
+          working-directory: src
 
       - name: "Azure webapp deploy"
         uses: azure/webapps-deploy@v2
