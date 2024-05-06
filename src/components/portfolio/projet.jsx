@@ -23,9 +23,9 @@ export const Projet = ({ imageUrl, titre, techno, date, description, index }) =>
             alt="Picture of the project"
             className="w-full max-h-128 object-cover"
           />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity w-full h-full duration-300 hover:bg-primary hover:opacity-90">
-            <div className="flex px-20 w-full h-full items-center justify-center">
-              <p className="text-white text-center text-xl">{description}</p>
+          <div className="absolute top-1/3 left-1/3 transform -translate-x-1/3 -translate-y-1/3 opacity-0 transition-opacity w-full h-full duration-300 hover:bg-primary hover:opacity-90">
+            <div className="flex px-5 md:px-20 w-full h-full items-center justify-center">
+              <p className="text-white text-center text-sm sm:text-base lg:text-xl">{description}</p>
             </div>
           </div>
         </div>
