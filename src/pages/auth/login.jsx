@@ -45,7 +45,7 @@ const Login = () => {
   const handleSubmit = async (values) => {
     try {
       await loginSchema.validate(values)
-      const { data } = await axios.post("/api/auth/login", values)
+      const { data } = await axios.post("https://skillport-tawny.vercel.app/api/auth/login", values)
       setConnected(true)
       setSuccess(true)
       setMessage(data.message)
