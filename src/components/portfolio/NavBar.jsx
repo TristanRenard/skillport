@@ -26,7 +26,7 @@ const NavBar = ({ lstComponent }) => {
   }, [])
 
   return (
-    <div className="top-0 left-0 w-full h-16 bg-tertiary bg-noise flex justify-center items-center z-50">
+    <div className="top-0 left-0 w-full h-16 bg-tertiary bg-noise hidden sm:flex justify-center items-center z-50">
       {links.map((link, index) => (
         <Link key={index
         } href={`#${link}`} className="hover:text-primary transition-all font-bold text-xl mx-4">{link}</Link>

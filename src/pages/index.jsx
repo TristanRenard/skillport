@@ -50,7 +50,7 @@ export default function Home() {
           </h2>
           <ul className="flex text-md font-black text-tertiary justify-around px-36">
             <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
-              <div className="bg-noise px-3 py-8">
+              <div className="bg-noise px-3 py-8 h-full">
                 Customizable components
               </div>
             </li>

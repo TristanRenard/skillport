@@ -6,17 +6,17 @@ export const Projet = ({ imageUrl, titre, techno, date, description, index }) =>
 
   return (
     <div className={clsx(
-      "group w-full flex border-y border-primary", (id % 2 !== 0 ? "bg-tertiary " : "bg-gradient-to-br from-primary to-[#df9884cc] text-quinary")
+      "group w-full flex border-y border-primary", (id % 2 !== 0 ? "bg-tertiary " : "bg-tertiary bg-noise text-quaternary md:bg-gradient-to-br from-primary to-[#df9884cc] md:text-quinary")
     )}>
-      <div className="w-full flex bg-noise">
-        <div className="flex flex-col justify-between w-1/2 p-4 transition-all">
+      <div className="w-full flex flex-col md:flex-row bg-noise">
+        <div className=" flex flex-col-reverse md:flex-col justify-between md:w-1/2 p-4 transition-all">
           <div className="flex justify-between">
             <p className="text-xl">{techno}</p>
             <p className="text-xl">© {date}</p>
           </div>
-          <p className="font-bold text-6xl">{titre}</p>
+          <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">{titre}</p>
         </div>
-        <div className="w-1/2 relative max-h-128">
+        <div className="md:w-1/2 relative max-h-128">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={imageUrl}

@@ -9,7 +9,7 @@ import { TexteImage } from "@/components/portfolio/textwImage"
 import { Titre } from "@/components/portfolio/titre"
 
 const Portfolio = ({ lstComponent }) => (
-  <div className="scroll-smooth">
+  <div className="scroll-smooth w-full">
     <NavBar lstComponent={lstComponent} />
     {lstComponent.map((element, index) => {
       if (element.type === "Header") {
