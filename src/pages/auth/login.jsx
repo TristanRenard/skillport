@@ -45,7 +45,7 @@ const Login = () => {
   const handleSubmit = async (values) => {
     try {
       await loginSchema.validate(values)
-      const { data } = await axios.post("http://91.167.201.225:3000/api/auth/login", values)
+      const { data } = await axios.post("/api/auth/login", values)
       setConnected(true)
       setSuccess(true)
       setMessage(data.message)
