@@ -16,9 +16,9 @@ const NavBar = () => {
   return (
     <nav className="w-full flex py-6 justify-between items-center" >
       <Link href="/">
-        <h4 className="uppercase text-3xl font-black text-primary px-4">SkillPort</h4>
+        <h4 className="uppercase ml-9 text-3xl font-black text-primary px-4">SkillPort</h4>
       </Link>
-      <ul className="flex text-xl font-semibold px-4 gap-3">
+      <ul className="flex text-xl font-semibold px-4 mr-9 gap-3">
         {connected ? (
           connectedLinks.map(({ name, href }, index) => (
             <div key={index} className="flex gap-3">

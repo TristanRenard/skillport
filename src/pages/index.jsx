@@ -4,7 +4,7 @@ import Link from "next/link"
 // eslint-disable-next-line max-lines-per-function
 export default function Home() {
   return (
-    <div className="bg-tertiary">
+    <div>
       <NavBar />
       <main>
         <div className="flex">
@@ -35,28 +35,39 @@ export default function Home() {
             clients.
           </p>
           <Link
-            href="createFolio.jsx"
-            className="text-quaternary bg-primary p-3 rounded-full mt-7"
+            href="createFolio"
+            className="text-2xl font-black text-tertiary bg-gradient-to-br from-primary to-[#df9884cc] rounded-full mt-7"
           >
-            Create a portfolio
+            <div className="p-4 px-8 bg-noise">
+              Create a portfolio
+            </div>
+
           </Link>
         </div>
         <div className="mt-28">
           <h2 className="w-full mb-16 text-center text-4xl font-black text-primary">
             Our advantages
           </h2>
-          <ul className="flex justify-around px-36">
-            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
-              Customizable components
+          <ul className="flex text-md font-black text-tertiary justify-around px-36">
+            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise px-3 py-8">
+                Customizable components
+              </div>
             </li>
-            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
-              Personalized content tailored to your activity
+            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise px-3 py-8">
+                Personalized content tailored to your activity
+              </div>
             </li>
-            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
-              Images to illustrate your content
+            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise px-3 py-8">
+                Images to illustrate your content
+              </div>
             </li>
-            <li className="w-1/6 px-3 py-8 bg-primary rounded-lg text-center">
-              Clean design to enhance your ideas
+            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise px-3 py-8">
+                Clean design to enhance your ideas
+              </div>
             </li>
           </ul>
         </div>
@@ -72,7 +83,7 @@ export default function Home() {
               <ul>
                 <li>System and network engineer</li>
                 <li>Enjoys climbing</li>
-                <li>Plays games</li>
+                <li>Plays video games</li>
               </ul>
             </div>
             <div className="flex flex-col justify-center items-center text-center">
@@ -80,7 +91,7 @@ export default function Home() {
               <ul>
                 <li>Developer</li>
                 <li>Enjoys fast cars</li>
-                <li>Had her ice cream stolen once</li>
+                <li>Loves climbing</li>
               </ul>
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -92,7 +103,7 @@ export default function Home() {
               <ul>
                 <li>Developer</li>
                 <li>Enjoys fashion</li>
-                <li>Says quirky things</li>
+                <li>Loves furniture design</li>
               </ul>
             </div>
           </div>
