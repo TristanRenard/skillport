@@ -50,16 +50,17 @@ const Types = {
   },
   Contact: {
     type: "Contact",
-    options: [
-      {
-        type: "insta",
-        url: "insta.com"
-      },
-      {
-        type: "git",
-        url: "github/moi.com"
-      },
-    ]
+    options: {
+      phone: "",
+      email: "",
+      github: "",
+      linkedin: "",
+      instagram: "",
+      twitter: "",
+      dribbble: "",
+      behance: "",
+      codepen: "",
+    }
   }
 
 }
@@ -86,7 +87,7 @@ const AddButton = ({ setFolioConfig, folioConfig }) => {
     <div className={clsx("font-semibold flex justify-center items-center btn-primary w-11/12 bg-gradient-to-br from-primary to-[#df9884cc] rounded-3xl ", (type === "add") && "h-20", (type === "selectType") && "min-h-52")} >
       <div className="w-full h-full bg-noise bg-fixed rounded-3xl flex justify-center items-center">
         {(type === "add") && (
-          <div className="w-full h-full flex justify-center items-center" onClick={handleAddClick} >
+          <div className="w-full h-full flex justify-center items-center cursor-pointer" onClick={handleAddClick} >
             <PlusCircleIcon className="h-12 w-12 fill-tertiary" />
           </div>
         )}

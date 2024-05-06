@@ -24,7 +24,7 @@ const handler = mw(async (req, res) => {
   if (req.method === "GET") {
     const { editedFolio } = user
 
-    res.status(200).json({ message: "User found", folio: editedFolio })
+    res.status(200).json({ message: "User found", username: user.username, folio: editedFolio })
   }
 
   if (req.method === "POST") {
@@ -32,6 +32,12 @@ const handler = mw(async (req, res) => {
     await Object.assign(user, { editedFolio: folio })
     await user.save()
     res.status(200).json({ message: "Folio updated" })
+  }
+
+  if (req.method === "PUT") {
+    user.publishedFolio = user.editedFolio
+    await user.save()
+    res.status(200).json({ message: "Folio updated", user })
   }
 
   res.status(400).json({ message: "Bad request" })

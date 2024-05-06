@@ -42,8 +42,7 @@ const TextWithImageForm = ({ folioConfig, setFolioConfig, id, update, deleteInde
           </div>
           <div className="flex w-full flex-col gap-2 text-tertiary">
             <label className="text-lg" htmlFor="text">Text</label>
-            <input
-              type="text"
+            <textarea
               id="text"
               value={textWithImage.text}
               placeholder="Text"

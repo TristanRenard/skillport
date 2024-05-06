@@ -6,7 +6,7 @@ const handler = mw(async (req, res) => {
     const { username } = req.query
     const user = await UserModel.findOne({ username })
 
-    res.status(200).json({ message: "User found", publishedFolio: user.publishedFolio })
+    res.status(200).json({ message: "User found", folio: user.publishedFolio })
   }
 
   res.status(404).json({ message: "User not found" }, req)

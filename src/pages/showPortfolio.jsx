@@ -70,10 +70,16 @@ const lstportfolio = [
       },
       email: "cat@cat.cat",
       phone: "06 06 06 06 06",
+      github: "https:github.com",
+      linkedin: "https:linkedin.com",
+      instagram: "https:instagram.com",
+      twitter: "https:twitter.com",
+      dribbble: "https:dribbble.com",
+      behance: "https:behance.com",
+      codepen: "https:codepen.com",
     },
   },
 ]
-
 const ShowPortfolio = () => (
   <>
     <h1>OUI</h1>

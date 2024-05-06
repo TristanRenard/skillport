@@ -1,9 +1,6 @@
-import clsx from "clsx"
-import { Montserrat } from "next/font/google"
 
-const montserrat = Montserrat({ subsets: ["latin"] })
 export const Description = ({ text, titre }) => (
-  <div className={clsx("m-4 mb-20 flex justify-end", montserrat.className)}>
+  <div className="m-4 mx-9 mb-20 flex justify-end">
     <div className="flex justify-center items-center w-full">
       <p className="max-w-screen-md">{text}</p>
     </div>

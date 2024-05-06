@@ -1,9 +1,6 @@
-import clsx from "clsx"
-import { Montserrat } from "next/font/google"
 
-const montserrat = Montserrat({ subsets: ["latin"] })
 export const Titre = ({ titre }) => (
-  <div className={clsx("my-24 mx-4", montserrat.className)}>
+  <div id={titre} className="my-24 mx-4">
     <h1 className="font-bold text-7xl">{titre}</h1>
   </div>
 )

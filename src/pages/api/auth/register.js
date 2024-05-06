@@ -9,6 +9,7 @@ const registerSchema = yup.object().shape({
   password: yup.string().required().min(8),
   confirmPassword: yup.string().required().oneOf([yup.ref("password"), null], "Passwords must match")
 })
+// eslint-disable-next-line consistent-return
 const handler = mw(async (req, res) => {
   if (req.method === "POST") {
     const user = req.body

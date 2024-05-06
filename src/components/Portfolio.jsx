@@ -1,3 +1,5 @@
+/* eslint-disable max-lines-per-function */
+import NavBar from "@/components/portfolio/NavBar"
 import { Description } from "@/components/portfolio/description"
 import { HeaderPortfolio } from "@/components/portfolio/header"
 import { Liens } from "@/components/portfolio/liens"
@@ -5,11 +7,10 @@ import { Projet } from "@/components/portfolio/projet"
 import { Texte } from "@/components/portfolio/texte"
 import { TexteImage } from "@/components/portfolio/textwImage"
 import { Titre } from "@/components/portfolio/titre"
-import React from "react"
 
 const Portfolio = ({ lstComponent }) => (
-  <div>
-    <h1>Portfolio</h1>
+  <div className="scroll-smooth">
+    <NavBar lstComponent={lstComponent} />
     {lstComponent.map((element, index) => {
       if (element.type === "Header") {
         return (
@@ -20,25 +21,29 @@ const Portfolio = ({ lstComponent }) => (
           />
         )
       }
+
       if (element.type === "Project") {
         return (
           <Projet
             key={index}
+            index={index}
             imageUrl={element.options.imageUrl}
-            text={element.options.text}
             titre={element.options.titre}
-            techno={element.options.techo}
+            techno={element.options.techno}
             date={element.options.date}
             description={element.options.description}
           />
         )
       }
+
       if (element.type === "Text") {
         return <Texte key={index} texte={element.options.text} />
       }
+
       if (element.type === "Title") {
         return <Titre key={index} titre={element.options.text} />
       }
+
       if (element.type === "Introduction") {
         return (
           <Description
@@ -48,6 +53,7 @@ const Portfolio = ({ lstComponent }) => (
           />
         )
       }
+
       if (element.type === "Textwithimage") {
         return (
           <TexteImage
@@ -57,16 +63,24 @@ const Portfolio = ({ lstComponent }) => (
           />
         )
       }
+
       if (element.type === "Contact") {
         return (
           <Liens
             key={index}
-            lstLien={element.options.lstLien}
             mail={element.options.email}
             telephone={element.options.phone}
+            github={element.options.github}
+            linkedin={element.options.linkedin}
+            instagram={element.options.instagram}
+            twitter={element.options.twitter}
+            dribbble={element.options.dribbble}
+            behance={element.options.behance}
+            codepen={element.options.codepen}
           />
         )
       }
+
       return null
     })}
   </div>

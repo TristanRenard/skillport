@@ -59,7 +59,7 @@ const Login = () => {
 
   return (
     <>
-      <PopUp open={popup} success={success} message={message} btnText="Login" onClose={handleClosePopup} clickBtn={handleClosePopup} />
+      <PopUp open={popup} success={success} message={message} btnText="Home" onClose={handleClosePopup} clickBtn={handleClosePopup} />
       <div className="flex flex-col items-center min-h-screen">
         <NavBar />
         <div className="flex flex-1 w-full items-center justify-center">
