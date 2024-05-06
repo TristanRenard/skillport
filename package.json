@@ -1,0 +1,30 @@
+{
+  "name": "skillport",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "clsx": "^2.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-hooks": "^0.4.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-testing-library": "^6.2.2",
+    "next": "14.2.3",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
