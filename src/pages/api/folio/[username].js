@@ -1,7 +1,6 @@
 import { mw } from "@/api/mw"
 import UserModel from "@/utils/database/model/userModel"
 
-export const dynamic = "force-dynamic"
 const handler = mw(async (req, res) => {
   if (req.method === "GET") {
     const { username } = req.query

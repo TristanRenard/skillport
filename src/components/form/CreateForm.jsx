@@ -22,7 +22,7 @@ const CreateForm = () => {
     enabled: false,
     queryFn: () => {
       if (folioConfig[0] !== "Loading...") {
-        return axios.post("https://skillport-tawny.vercel.app/api/folio",
+        return axios.post("/api/folio",
           { folio: folioConfig }
         ).then((res) => res.data.folio)
       }
@@ -40,15 +40,15 @@ const CreateForm = () => {
     ])
   }
   const publish = () => {
-    axios.put("https://skillport-tawny.vercel.app/api/folio", { folio: folioConfig }).then((res) => res.data.folio)
+    axios.put("/api/folio", { folio: folioConfig }).then((res) => res.data.folio)
     router.push(`/folio/${username}`)
   }
   const save = () => (
-    axios.post("https://skillport-tawny.vercel.app/api/folio", { folio: folioConfig }).then((res) => res.data.folio)
+    axios.post("/api/folio", { folio: folioConfig }).then((res) => res.data.folio)
   )
 
   useEffect(() => {
-    axios.get("https://skillport-tawny.vercel.app/api/folio").then((res) => {
+    axios.get("/api/folio").then((res) => {
       setFolioConfig(res.data.folio)
       setUsername(res.data.username)
     })
