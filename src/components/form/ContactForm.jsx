@@ -1,9 +1,9 @@
 /* eslint-disable max-lines */
-import { XMarkIcon } from "@heroicons/react/24/solid"
+import { ChevronDownIcon, ChevronUpIcon, XMarkIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 
 // eslint-disable-next-line max-lines-per-function
-const ContactForm = ({ id, folioConfig, setFolioConfig, update, deleteIndex }) => {
+const ContactForm = ({ id, folioConfig, setFolioConfig, update, deleteIndex, upIndex, downIndex }) => {
   const [contact, setContact] = useState(folioConfig[id].options)
 
   useEffect(() => {
@@ -21,6 +21,16 @@ const ContactForm = ({ id, folioConfig, setFolioConfig, update, deleteIndex }) =
         <div className="flex flex-col w-3/4 p-8 gap-8 justify-center items-center">
           <div className="w-full flex">
             <h4 className="w-full font-bold text-xl text-quinary">Contact</h4>
+            <button
+              onClick={() => upIndex(id)}
+            >
+              <ChevronUpIcon className="fill-quinary h-7 w-h-7" />
+            </button>
+            <button
+              onClick={() => downIndex(id)}
+            >
+              <ChevronDownIcon className="fill-quinary h-7 w-h-7" />
+            </button>
             <button
               onClick={() => {
                 deleteIndex(id)
