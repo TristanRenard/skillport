@@ -39,6 +39,30 @@ const CreateForm = () => {
       ...folioConfig.slice(id + 1)
     ])
   }
+  const upIndex = (id) => {
+    if (id === 0) {
+      return
+    }
+
+    setFolioConfig([
+      ...folioConfig.slice(0, id - 1),
+      folioConfig[id],
+      folioConfig[id - 1],
+      ...folioConfig.slice(id + 1)
+    ])
+  }
+  const downIndex = (id) => {
+    if (id === folioConfig.length - 1) {
+      return
+    }
+
+    setFolioConfig([
+      ...folioConfig.slice(0, id),
+      folioConfig[id + 1],
+      folioConfig[id],
+      ...folioConfig.slice(id + 2)
+    ])
+  }
   const publish = () => {
     axios.put("/api/folio", { folio: folioConfig }).then((res) => res.data.folio)
     router.push(`/folio/${username}`)
@@ -65,25 +89,25 @@ const CreateForm = () => {
       {folioConfig.map((config, id) => {
         switch (config.type) {
           case "Header":
-            return <HeaderForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} deleteIndex={deleteIndex} />
+            return <HeaderForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} upIndex={upIndex} downIndex={downIndex} deleteIndex={deleteIndex} />
 
           case "Introduction":
-            return <IntroductionForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} deleteIndex={deleteIndex} />
+            return <IntroductionForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} upIndex={upIndex} downIndex={downIndex} deleteIndex={deleteIndex} />
 
           case "Title":
-            return <TitleForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} deleteIndex={deleteIndex} />
+            return <TitleForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} upIndex={upIndex} downIndex={downIndex} deleteIndex={deleteIndex} />
 
           case "Project":
-            return <ProjectForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} deleteIndex={deleteIndex} />
+            return <ProjectForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} upIndex={upIndex} downIndex={downIndex} deleteIndex={deleteIndex} />
 
           case "Contact":
-            return <ContactForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} deleteIndex={deleteIndex} />
+            return <ContactForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} upIndex={upIndex} downIndex={downIndex} deleteIndex={deleteIndex} />
 
           case "Text":
-            return <TextForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} deleteIndex={deleteIndex} />
+            return <TextForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} upIndex={upIndex} downIndex={downIndex} deleteIndex={deleteIndex} />
 
           case "Textwithimage":
-            return <TextWithImageForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} deleteIndex={deleteIndex} />
+            return <TextWithImageForm key={id} id={id} folioConfig={folioConfig} setFolioConfig={setFolioConfig} update={update} upIndex={upIndex} downIndex={downIndex} deleteIndex={deleteIndex} />
 
           default:
             return <div key={id} />

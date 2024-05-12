@@ -1,7 +1,7 @@
-import { XMarkIcon } from "@heroicons/react/24/solid"
+import { ChevronDownIcon, ChevronUpIcon, XMarkIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 
-const ProjectForm = ({ folioConfig, setFolioConfig, id, update, deleteIndex }) => {
+const ProjectForm = ({ folioConfig, setFolioConfig, id, update, deleteIndex, upIndex, downIndex }) => {
   const [project, setProject] = useState(folioConfig[id].options)
   useEffect(() => {
     setFolioConfig((prev) => {
@@ -17,6 +17,16 @@ const ProjectForm = ({ folioConfig, setFolioConfig, id, update, deleteIndex }) =
         <div className="flex flex-col w-3/4 p-8 gap-8 justify-center items-center">
           <div className="w-full flex">
             <h4 className="w-full font-bold text-xl text-quinary">Project</h4>
+            <button
+              onClick={() => upIndex(id)}
+            >
+              <ChevronUpIcon className="fill-quinary h-7 w-h-7" />
+            </button>
+            <button
+              onClick={() => downIndex(id)}
+            >
+              <ChevronDownIcon className="fill-quinary h-7 w-h-7" />
+            </button>
             <button
               onClick={() => {
                 deleteIndex(id)
