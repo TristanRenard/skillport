@@ -103,7 +103,6 @@ What you can do with this project :
 - Make derivative works or Modify the project
 
 What you can't do with this project :
-- Commercial use
 - Sublicense
 - Private use
 - Place warranty
