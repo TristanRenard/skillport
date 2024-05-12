@@ -1,41 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# [SkillPort](https://github.com/parlabarbedeMerlin/skillport)
 
-First, run the development server:
+<p>
+Create your own portfolio and share it with the world!
+</p>
+
+![index Page](./github/index.png)
+</div>
+
+## 📝 Table of Contents
+- [The concept](#the-concept)
+- [About](#about)
+- [Technologies](#technologies)
+- [Installation Steps](#installation-steps)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [License](#license)
+- [Contributing](#contributing)
+
+## The concept
+SkillPort is fully based on one simple feature: **Create your blocks**. You can add the sections you want to create your own portfolio. You can add a title, a description, and a link to your project. You can create **YOUR** portfolio as **YOU** want.
+
+## 🧐 About
+This project was made by [Vincent](https://github.com/VGauthieer) , [Léa](https://github.com/leashmt) and [Tristan](https://github.com/parlabarbedeMerlin) in 3.5 days. This project is based on the [Next.js](https://nextjs.org/) framework and MongoDB for the DB. We have decided to do an editor to create portfolios. You can find the project after the 3.5 days of work in the branch `rendu`.
+
+## 🚀 Technologies
+- [Next.js](https://nextjs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
+
+## 🛠️ Installation Steps
+0. Prerequisites
+- Node.js LTS
+- npm or pnpm
+- MongoDB
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/parlabarbedeMerlin/skillport
+```
+
+2. Change the working directory
+
+```bash
+cd skillport
+```
+
+3. Install dependencies
+
+```bash
+npm install
+
+# or
+
+pnpm install
+
+```
+
+4. Configure .env.local
+
+```bash
+cp .env.local.sample .env.local
+```
+Don't forget to provide a secret for the JWT_SECRET variable.
+
+5. Run the app
 
 ```bash
 npm run dev
+
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Features
+- [x] Create your own portfolio
+- [x] Share your portfolio 
+- [x] Edit your portfolio
+- [ ] Change the order of the blocks
+- [ ] Upload images
+- [ ] Add a custom domain
+- [ ] Add a custom theme
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 📸 Screenshots
+### Home Page
+![Home Page](./github/home.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Editor
+![Editor](./github/editor.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Generated Portfolio
+![Generated Portfolio](./github/generatedFolio.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## 📜 License
+What you can do with this project :
+- Copy, distribute and display the project
+- Make derivative works or Modify the project
 
-To learn more about Next.js, take a look at the following resources:
+What you can't do with this project :
+- Commercial use
+- Sublicense
+- Private use
+- Place warranty
+- Hold liable
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+What you need to do if you want to modify or distribute the project :
+- Include the original project
+- Include the original license
+- Send to us our version of the project
+- Credit us
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can read the full license [here](./LICENSE)
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# skillport
+If you want to contribute to this project, you are welcome. You can fork the project and make a pull request with your changes. We will review it and merge it if it's good. You can also open an issue if you have a problem or a feature request. We will try to help you as soon as possible.
