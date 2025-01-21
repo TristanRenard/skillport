@@ -16,11 +16,13 @@ const handler = mw(async (req, res) => {
         await generateAuthToken(user, res)
       }
 
-      res.status(401).json({ message: "Invalid credentials" })
+      return res.status(401).json({ message: "Invalid credentials" })
     }
 
-    res.status(404).json({ message: "User not found" })
+    return res.status(404).json({ message: "User not found" })
   }
+
+  return res.status(404).json({ message: "User not found" })
 })
 
 export default handler

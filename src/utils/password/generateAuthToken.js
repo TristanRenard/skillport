@@ -14,7 +14,8 @@ const generateAuthToken = async ({ email, username, admin }, res) => {
     .sign(secret)
 
   res.setHeader("Set-Cookie", `token=${token}; Secure; SameSite=None; Path=/; Max-Age=7200; email=${email}; Secure; SameSite=None; Path=/; Max-Age=7200`)
-  res.status(200).json({ message: "Logged in successfully" })
+
+  return res.status(200).json({ message: "Logged in successfully" })
 }
 
 export default generateAuthToken

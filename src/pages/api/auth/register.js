@@ -23,7 +23,8 @@ const handler = mw(async (req, res) => {
 
       const usr = new UserModel(newUser)
       await usr.save()
-      res.status(201).json({ message: "User registered" })
+
+      return res.status(201).json({ message: "User registered" })
     } catch (error) {
       return res.status(400).json({ message: error.message })
     }

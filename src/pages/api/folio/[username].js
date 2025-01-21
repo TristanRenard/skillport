@@ -7,17 +7,17 @@ const handler = mw(async (req, res) => {
     const user = await UserModel.findOne({ username })
 
     if (!user) {
-      res.status(404).json({ message: "User not found" })
+      return res.status(404).json({ message: "User not found", username })
     }
 
     if (user.publishedFolio) {
-      res.status(200).json({ message: "User found", folio: user.publishedFolio })
+      return res.status(200).json({ message: "User found", folio: user.publishedFolio })
     }
 
-    res.status(404).json({ message: "Folio not found" })
+    return res.status(404).json({ message: "Folio not found" })
   }
 
-  res.status(404).json({ message: "User not found" }, req)
+  return res.status(404).json({ message: "User not found" }, req)
 })
 
 export default handler
