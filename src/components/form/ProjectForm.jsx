@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { ChevronDownIcon, ChevronUpIcon, XMarkIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 
@@ -59,6 +60,11 @@ const ProjectForm = ({ folioConfig, setFolioConfig, id, update, deleteIndex, upI
           <div className="flex w-full flex-col gap-2 text-tertiary">
             <label className="text-lg" htmlFor="text">Description</label>
             <textarea id="text" value={project.description} placeholder="Description" onChange={(e) => setProject({ ...project, description: e.target.value })} onBlur={update} className="w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:italic p-2 px-3 rounded-xl outline-none border-tertiary border-2"
+            />
+          </div>
+          <div className="flex w-full flex-col gap-2 text-tertiary">
+            <label className="text-lg" htmlFor="text">Link</label>
+            <input type="text" id="text" value={project.link} placeholder="Link (can be empty)" onChange={(e) => setProject({ ...project, link: e.target.value })} onBlur={update} className="w-full bg-[#df9884] placeholder:text-quinary placeholder:font-light placeholder:italic p-2 px-3 rounded-xl outline-none border-tertiary border-2"
             />
           </div>
         </div>

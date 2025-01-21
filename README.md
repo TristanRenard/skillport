@@ -23,7 +23,7 @@ Create your own portfolio and share it with the world!
 SkillPort is fully based on one simple feature: **Create your blocks**. You can add the sections you want to create your own portfolio. You can add a title, a description, and a link to your project. You can create **YOUR** portfolio as **YOU** want.
 
 ## 🧐 About
-This project was made by [Vincent](https://github.com/VGauthieer) , [Léa](https://github.com/leashmt) and [Tristan](https://github.com/parlabarbedeMerlin) in 3.5 days. This project is based on the [Next.js](https://nextjs.org/) framework and MongoDB for the DB. We have decided to do an editor to create portfolios. You can find the project after the 3.5 days of work in the branch `rendu`.
+This project was made by [Vincent](https://github.com/VGauthieer) , [Léa](https://github.com/leashmt) and [Tristan](https://github.com/TristanRenard/) in 3.5 days. This project is based on the [Next.js](https://nextjs.org/) framework and MongoDB for the DB. We have decided to do an editor to create portfolios. You can find the project after the 3.5 days of work in the branch `rendu`.
 
 ## 🚀 Technologies
 - [Next.js](https://nextjs.org/)
@@ -103,7 +103,6 @@ What you can do with this project :
 - Make derivative works or Modify the project
 
 What you can't do with this project :
-- Commercial use
 - Sublicense
 - Private use
 - Place warranty
