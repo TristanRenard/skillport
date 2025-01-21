@@ -1,13 +1,13 @@
 import checkUrls from "@/utils/checkUrls"
 import { protectedUrls } from "@/utils/config"
-import verifyTokenValidity from "@/utils/password/verifyTokenValidity"
+import { jwtVerify } from "jose"
 
 // eslint-disable-next-line consistent-return
 export const middleware = async (request) => {
   if (checkUrls(request.nextUrl.pathname, protectedUrls)) {
     try {
       const token = request.cookies.get("token")?.value
-      const user = await verifyTokenValidity(token)
+      const user = await await jwtVerify(token, new TextEncoder().encode(process.env.JWT_SECRET))
 
       if (!token || !user) {
         return Response.redirect(new URL("/auth/login", request.url))

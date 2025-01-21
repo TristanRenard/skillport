@@ -32,6 +32,7 @@ const Portfolio = ({ lstComponent }) => (
             techno={element.options.techno}
             date={element.options.date}
             description={element.options.description}
+            link={element.options.link}
           />
         )
       }
