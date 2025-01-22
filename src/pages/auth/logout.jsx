@@ -8,7 +8,6 @@ const Logout = () => {
   useEffect(() => {
     const logout = () => {
       Cookies.remove("token")
-      Cookies.remove("email")
       router.push("/")
     }
 
