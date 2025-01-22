@@ -85,7 +85,7 @@ const CreateForm = () => {
   }, [refetch])
 
   return (
-    <div className="w-3/4 flex flex-col items-center gap-6">
+    <div className="w-full md:w-3/4 flex flex-col items-center gap-6">
       {folioConfig.map((config, id) => {
         switch (config.type) {
           case "Header":
@@ -114,7 +114,7 @@ const CreateForm = () => {
         }
       })}
       <AddButton setFolioConfig={setFolioConfig} folioConfig={folioConfig} />
-      <div className="w-11/12 flex justify-center  gap-6">
+      <div className="w-11/12 flex flex-col sm:flex-row justify-center  gap-6">
         <div className="h-20 font-semibold flex justify-center items-center btn-primary w-full bg-gradient-to-br from-primary to-[#df9884cc] rounded-3xl" onClick={save}>
           <div className="w-full h-full bg-noise bg-fixed rounded-3xl flex justify-center items-center">
             <div className="w-full h-full flex justify-center items-center cursor-pointer text-tertiary gap-6" >
