@@ -1,4 +1,5 @@
 import { useConnectionContext } from "@/context/connection"
+import clsx from "clsx"
 import Link from "next/link"
 
 const disconnectedLinks = [
@@ -15,10 +16,10 @@ const NavBar = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center" >
-      <Link href="/">
+      <Link className={clsx(connected && "hidden sm:block")} href="/">
         <h4 className="uppercase ml-9 text-3xl font-black text-primary px-4">SkillPort</h4>
       </Link>
-      <ul className="flex text-xl font-semibold px-4 mr-9 gap-3">
+      <ul className="flex w-full justify-end text-base align-middle sm:text-xl font-medium sm:font-semibold px-4 sm:mr-9 gap-3">
         {connected ? (
           connectedLinks.map(({ name, href }, index) => (
             <div key={index} className="flex gap-3">
