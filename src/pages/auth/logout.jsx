@@ -1,4 +1,4 @@
-import Cookies from "js-cookie"
+import axios from "axios"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 
@@ -7,7 +7,7 @@ const Logout = () => {
 
   useEffect(() => {
     const logout = () => {
-      Cookies.remove("token")
+      axios("/api/auth/logout")
       router.push("/")
     }
 
