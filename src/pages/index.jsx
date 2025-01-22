@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar"
+import Image from "next/image"
 import Link from "next/link"
 
 // eslint-disable-next-line max-lines-per-function
@@ -7,19 +8,19 @@ export default function Home() {
     <div>
       <NavBar />
       <main>
-        <div className="flex">
+        <div className="flex flex-col-reverse mt-12 lg:flex-row items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/heroheader.png" alt="Header Image" className="w-2/3" />
+          <Image width={1920} height={1080} src="/heroheader.png" alt="Header Image" className="w-2/3 aspect-video" />
           <div className="flex flex-col justify-center">
-            <h1 className="uppercase text-6xl font-black text-primary mb-10">
+            <h1 className="uppercase text-6xl lg:text-5xl font-black text-primary mb-10">
               SKILLPORT
             </h1>
             <div className="text-xl">
-              <p>
+              <p className="text-center">
                 Showcase your{" "}
                 <span className="font-bold text-primary">skills</span>
               </p>
-              <p>
+              <p className="text-center">
                 Create your{" "}
                 <span className="font-bold text-primary">portfolio</span>
               </p>
@@ -48,24 +49,24 @@ export default function Home() {
           <h2 className="w-full mb-16 text-center text-4xl font-black text-primary">
             Our advantages
           </h2>
-          <ul className="flex text-md font-black text-tertiary justify-around px-36">
-            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
-              <div className="bg-noise px-3 py-8 h-full">
+          <ul className="grid gap-2 grid-cols-2 lg:grid-cols-4 text-md font-black text-tertiary justify-around px-3 sm:px-36">
+            <li className="w-full bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise bg-repeat min-h-full min-w-full px-3 py-8 flex justify-center items-center">
                 Customizable components
               </div>
             </li>
-            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
-              <div className="bg-noise px-3 py-8">
+            <li className="w-full bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise bg-repeat min-h-full min-w-full px-3 py-8 flex justify-center items-center">
                 Personalized content tailored to your activity
               </div>
             </li>
-            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
-              <div className="bg-noise px-3 py-8">
+            <li className="w-full bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise bg-repeat min-h-full min-w-full px-3 py-8 flex justify-center items-center">
                 Images to illustrate your content
               </div>
             </li>
-            <li className="w-1/6 bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
-              <div className="bg-noise px-3 py-8">
+            <li className="w-full bg-gradient-to-br from-primary to-[#df9884cc] bg-primary rounded-lg text-center">
+              <div className="bg-noise bg-repeat min-h-full min-w-full px-3 py-8 flex justify-center items-center">
                 Clean design to enhance your ideas
               </div>
             </li>
@@ -75,7 +76,7 @@ export default function Home() {
           <h2 className="w-full mb-8 text-center text-4xl font-black text-primary">
             The team
           </h2>
-          <div className="grid grid-cols-2 grid-rows-3 w-2/5 my-8">
+          <div className="grid grid-cols-2 grid-rows-3 w-full sm:w-4/5 md:w-3/5 lg:w-2/5 my-8 mt-12">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/vincent.jpg" alt="Vincent" />
             <div className="flex flex-col justify-center items-center text-center">
