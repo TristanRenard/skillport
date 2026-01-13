@@ -1,0 +1,38 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME:-root}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD:-example}
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - skillport-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skillport-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_URI=mongodb://${MONGO_INITDB_ROOT_USERNAME:-root}:${MONGO_INITDB_ROOT_PASSWORD:-example}@mongodb:27017/SkillPort?authSource=admin
+      - JWT_SECRET=${JWT_SECRET}
+      - NODE_ENV=production
+    depends_on:
+      - mongodb
+    networks:
+      - skillport-network
+
+volumes:
+  mongo-data:
+
+networks:
+  skillport-network:
+    driver: bridge

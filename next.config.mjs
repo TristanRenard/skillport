@@ -1,13 +1,16 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "rdackrkotksedwcf.public.blob.vercel-storage.com",
-        port: "",
-        pathname: "**",
+        hostname: "**",
+      },
+      {
+        protocol: "http",
+        hostname: "**",
       },
     ],
   }

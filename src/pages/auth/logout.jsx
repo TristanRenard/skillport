@@ -1,20 +1,23 @@
+import { useConnectionContext } from "@/context/connection"
 import axios from "axios"
+import Cookies from "js-cookie"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 
 const Logout = () => {
   const router = useRouter()
+  const { setConnected } = useConnectionContext()
 
   useEffect(() => {
-    const logout = () => {
-      axios("/api/auth/logout")
+    const logout = async () => {
+      await axios.get("/api/auth/logout")
+      Cookies.remove("token")
+      setConnected(undefined)
       router.push("/")
     }
 
     logout()
-
-    return logout
-  }, [router])
+  }, [router, setConnected])
 
   return (
     <div>

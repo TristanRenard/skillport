@@ -3,7 +3,7 @@ import { protectedUrls } from "@/utils/config"
 import { jwtVerify } from "jose"
 
 // eslint-disable-next-line consistent-return
-export const middleware = async (request) => {
+export const proxy = async (request) => {
   if (checkUrls(request.nextUrl.pathname, protectedUrls)) {
     try {
       const token = request.cookies.get("token")?.value

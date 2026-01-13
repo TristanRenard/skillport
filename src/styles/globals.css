@@ -1,3 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: rgb(220, 121, 100);
+  --color-secondary: rgb(125, 122, 188);
+  --color-tertiary: rgb(231, 221, 201);
+  --color-quaternary: rgb(27, 25, 21);
+  --color-quinary: rgb(238, 233, 222);
+
+  --spacing-128: 500px;
+}

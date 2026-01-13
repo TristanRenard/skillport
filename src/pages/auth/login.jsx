@@ -46,11 +46,13 @@ const Login = () => {
     try {
       await loginSchema.validate(values)
       const { data } = await axios.post("/api/auth/login", values)
+      console.log(data)
       setConnected(true)
       setSuccess(true)
       setMessage(data.message)
       setPopup(true)
     } catch (error) {
+      console.log(error)
       setSuccess(false)
       setMessage(error.response.data.message)
       setPopup(true)

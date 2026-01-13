@@ -6,8 +6,13 @@ export const mw = (handle) => async (req, res) => {
     console.log("Connecting to the database...")
 
     try {
-      await mongoose.connect(process.env.DB_URI)
-      console.log("Database connected")
+      await mongoose.connect(process.env.DB_URI, {
+        serverSelectionTimeoutMS: 5000,
+        autoCreate: true,
+        autoIndex: true,
+      })
+      console.log("Database connected successfully")
+      console.log(`Connected to database: ${mongoose.connection.db.databaseName}`)
 
       return await handle(req, res)
     } catch (err) {

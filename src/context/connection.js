@@ -6,10 +6,10 @@ const ConnectionContext = createContext({})
 export const ConnectionContextProvider = ({ children }) => {
   const [connected, setConnected] = useState()
 
-  useEffect(() => () => {
+  useEffect(() => {
     const connect = Cookies.get("token")
     setConnected(connect)
-  })
+  }, [])
 
   return (
     <ConnectionContext.Provider value={{ connected, setConnected }}>

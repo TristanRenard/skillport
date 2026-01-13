@@ -44,24 +44,22 @@ const CreateForm = () => {
       return
     }
 
-    setFolioConfig([
-      ...folioConfig.slice(0, id - 1),
-      folioConfig[id],
-      folioConfig[id - 1],
-      ...folioConfig.slice(id + 1)
-    ])
+    const newConfig = [...folioConfig]
+    const temp = newConfig[id]
+    newConfig[id] = newConfig[id - 1]
+    newConfig[id - 1] = temp
+    setFolioConfig(newConfig)
   }
   const downIndex = (id) => {
     if (id === folioConfig.length - 1) {
       return
     }
 
-    setFolioConfig([
-      ...folioConfig.slice(0, id),
-      folioConfig[id + 1],
-      folioConfig[id],
-      ...folioConfig.slice(id + 2)
-    ])
+    const newConfig = [...folioConfig]
+    const temp = newConfig[id]
+    newConfig[id] = newConfig[id + 1]
+    newConfig[id + 1] = temp
+    setFolioConfig(newConfig)
   }
   const publish = () => {
     axios.put("/api/folio", { folio: folioConfig }).then((res) => res.data.folio)
