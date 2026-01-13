@@ -56,6 +56,8 @@ docker-compose up --build
 
 TADA! The application should now be running at `http://127.0.0.1:3000`.
 
+Pour plus d'informations [cliquez ici](/Docker.md).
+
 
 ## 🛠️ Installation Steps
 0. Prerequisites
